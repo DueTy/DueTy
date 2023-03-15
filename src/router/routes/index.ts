@@ -2,8 +2,8 @@ import { RouteRecordRaw } from 'vue-router'
 import homeRoutes from './home'
 
 
-const routes: RouteRecordRaw = [
+const routes: RouteRecordRaw[] = [
   ...homeRoutes
 ]
 
-export default 
+export default routes
