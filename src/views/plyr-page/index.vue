@@ -6,7 +6,7 @@
   >
     <video ref="videoRef" controls playsinline id="video">
       <source
-        src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4"
+        src="https://www.duety.top/plugins/plyr.js/plyr-demo.mp4"
         type="video/mp4"
         size="576"
       />
@@ -38,10 +38,10 @@ function addHeadNode(tag: string, attrs: any) {
 Promise.all([
   addHeadNode("link", {
     rel: "stylesheet",
-    href: "https://cdn.plyr.io/3.7.7/plyr.css",
+    href: "https://www.duety.top/plugins/plyr.js/plyr.css",
   }),
   addHeadNode("script", {
-    src: "https://cdn.plyr.io/3.7.7/plyr.js",
+    src: "https://www.duety.top/plugins/plyr.js/plyr.js",
   }),
 ]).then(() => {
   loading.value = false
@@ -60,6 +60,7 @@ Promise.all([
       speed: "速度",
       normal: "正常",
     },
+    iconUrl: "https://www.duety.top/plugins/plyr.js/plyr.svg",
   })
 })
 function handleTouchMove() {
