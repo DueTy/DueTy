@@ -46,8 +46,6 @@
       <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><v:rect style="width:600px;" xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false"><v:fill origin="0, -0.5" position="0, -0.5" src="//1.bp.blogspot.com/-TPrfhxbYpDY/Uh3Refzk02I/AAAAAAAALw8/5sUJ0UUGYuw/s1600/New+York+in+The+1960's+-+70's+(2).jpg" type="frame" size="1,1" aspect="atleast" /><v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0"><![endif]-->
       <div
         style="
-          background: url('//1.bp.blogspot.com/-TPrfhxbYpDY/Uh3Refzk02I/AAAAAAAALw8/5sUJ0UUGYuw/s1600/New+York+in+The+1960's + -+70's+(2).jpg')
-            center top / cover no-repeat;
           background-position: center top;
           background-repeat: no-repeat;
           background-size: cover;
@@ -58,19 +56,11 @@
         <div style="line-height: 0; font-size: 0">
           <table
             align="center"
-            background="//1.bp.blogspot.com/-TPrfhxbYpDY/Uh3Refzk02I/AAAAAAAALw8/5sUJ0UUGYuw/s1600/New+York+in+The+1960's+-+70's+(2).jpg"
             border="0"
             cellpadding="0"
             cellspacing="0"
             role="presentation"
-            style="
-              background: url('//1.bp.blogspot.com/-TPrfhxbYpDY/Uh3Refzk02I/AAAAAAAALw8/5sUJ0UUGYuw/s1600/New+York+in+The+1960's + -+70's+(2).jpg')
-                center top / cover no-repeat;
-              background-position: center top;
-              background-repeat: no-repeat;
-              background-size: cover;
-              width: 100%;
-            "
+            class="top-table-container"
           >
             <tbody>
               <tr>
@@ -111,23 +101,7 @@
                               padding: 10px 25px;
                               word-break: break-word;
                             "
-                          >
-                            <div
-                              style="
-                                font-family: Helvetica Neue;
-                                font-size: 40px;
-                                line-height: 1;
-                                text-align: center;
-                                color: #ffffff;
-                              "
-                            >
-                              DueTy's
-                              <span style="font-family: Comic Sans MS, cursive"
-                                >​​​​​​​</span
-                              >
-                              <br />
-                            </div>
-                          </td>
+                          ></td>
                         </tr>
                       </tbody>
                     </table>
@@ -206,7 +180,7 @@
                               color: #626262;
                             "
                           >
-                            欢迎来到我的首页
+                            DueTy's
                           </div>
                         </td>
                       </tr>
@@ -351,6 +325,14 @@
 <script setup lang="ts"></script>
 
 <style scoped>
+.top-table-container {
+  background: url("http://www.duety.top/images/WechatIMG21.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+}
 #outlook a {
   padding: 0;
 }
