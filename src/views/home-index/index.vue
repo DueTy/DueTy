@@ -326,7 +326,7 @@
 
 <style scoped>
 .top-table-container {
-  background: url("http://www.duety.top/images/WechatIMG21.png");
+  background: url("https://www.duety.top/images/WechatIMG21.png?imageMogr2/format/webp/blur/1x0/quality/100");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
