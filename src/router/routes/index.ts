@@ -1,9 +1,11 @@
 import { RouteRecordRaw } from 'vue-router'
 import homeRoutes from './home'
+import samples from './samples'
 
 
 const routes: RouteRecordRaw[] = [
-  ...homeRoutes
+  ...homeRoutes,
+  ...samples
 ]
 
 export default routes
