@@ -19,6 +19,7 @@ import { ref } from "vue"
 
 const videoRef = ref()
 const loading = ref<boolean>(true)
+let player: any
 
 function addHeadNode(tag: string, attrs: any) {
   return new Promise((s, j) => {
@@ -45,7 +46,7 @@ Promise.all([
   }),
 ]).then(() => {
   loading.value = false
-  new window.Plyr(videoRef.value, {
+  player = new window.Plyr(videoRef.value, {
     controls: [
       "play",
       "current-time",
@@ -66,6 +67,11 @@ Promise.all([
 function handleTouchMove() {
   console.log("here")
 }
+
+window.addEventListener("visibilitychange", () => {
+  const { visibilityState } = document
+  visibilityState === "hidden" && player.pause()
+})
 </script>
 
 <style scoped>
