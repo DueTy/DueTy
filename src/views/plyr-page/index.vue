@@ -6,7 +6,7 @@
   >
     <video ref="videoRef" controls playsinline id="video">
       <source
-        src="https://www.duety.top/plugins/plyr.js/plyr-demo.mp4"
+        :src="cdnPrefix + '/plugins/plyr.js/plyr-demo.mp4'"
         type="video/mp4"
         size="576"
       />
@@ -36,13 +36,14 @@ function addHeadNode(tag: string, attrs: any) {
     document.head.appendChild(domNode)
   })
 }
+const cdnPrefix = import.meta.env.VITE_QINIU_CDN_PREFIX
 Promise.all([
   addHeadNode("link", {
     rel: "stylesheet",
-    href: "https://www.duety.top/plugins/plyr.js/plyr.css",
+    href: cdnPrefix + "/plugins/plyr.js/plyr.css",
   }),
   addHeadNode("script", {
-    src: "https://www.duety.top/plugins/plyr.js/plyr.js",
+    src: cdnPrefix + "/plugins/plyr.js/plyr.js",
   }),
 ]).then(() => {
   loading.value = false
@@ -61,7 +62,7 @@ Promise.all([
       speed: "速度",
       normal: "正常",
     },
-    iconUrl: "https://www.duety.top/plugins/plyr.js/plyr.svg",
+    iconUrl: cdnPrefix + "/plugins/plyr.js/plyr.svg",
   })
 })
 function handleTouchMove() {

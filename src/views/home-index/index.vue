@@ -324,9 +324,9 @@
 
 <script setup lang="ts"></script>
 
-<style scoped>
+<style scoped lang="less">
 .top-table-container {
-  background: url("https://www.duety.top/images/WechatIMG21.png?imageMogr2/format/webp/blur/1x0/quality/100");
+  background: url(~"@{cdnPrefix}/images/WechatIMG21.png?imageMogr2/format/webp/blur/1x0/quality/100");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
