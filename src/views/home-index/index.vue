@@ -320,13 +320,16 @@
       <!--[if mso | IE]></td></tr></table><![endif]-->
     </div>
   </div>
+  <Footer />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Footer from "@/layouts/Footer.vue"
+</script>
 
 <style scoped lang="less">
 .top-table-container {
-  background: url(~"@{cdnPrefix}/images/WechatIMG21.png?imageMogr2/format/webp/blur/1x0/quality/100");
+  background: url("@/assets/images/banner.jpeg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
