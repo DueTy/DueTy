@@ -202,7 +202,7 @@
                               color: #525252;
                             "
                           >
-                            程序员、机车男、打工仔...
+                            程序员、机车男、One Piece、SD...
                           </div>
                         </td>
                       </tr>
@@ -304,7 +304,7 @@
                               color: #525252;
                             "
                           >
-                            I'm in love with my ninja 400
+                            I'm in love with my machine
                           </div>
                         </td>
                       </tr>
@@ -330,9 +330,9 @@ import Footer from "@/layouts/Footer.vue"
 <style scoped lang="less">
 .top-table-container {
   background: url("@/assets/images/banner.jpeg");
-  background-position: center bottom;
+  background-position: right 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 194%;
   width: 100%;
   height: 300px;
 }
