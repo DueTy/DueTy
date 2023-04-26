@@ -329,7 +329,7 @@ import Footer from "@/layouts/Footer.vue"
 
 <style scoped lang="less">
 .top-table-container {
-  background: url("@/assets/images/banner.jpeg");
+  background: url(~"@{cdnPrefix}/t-cdn/images/banner.jpeg");
   background-position: right 50%;
   background-repeat: no-repeat;
   background-size: 194%;
