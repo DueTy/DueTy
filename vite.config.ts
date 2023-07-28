@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => {
       preprocessorOptions: {
         less: {
           // 定义全局变量
-          additionalData: `@cdnPrefix: '${env.VITE_QINIU_CDN_PREFIX}';`
+          additionalData: `@cdnPrefix: '${env.VITE_CDN_PREFIX}';`
         }
       }
     }
