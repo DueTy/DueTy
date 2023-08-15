@@ -1,5 +1,5 @@
-import Footer from "./layouts/Footer";
-import "./App.less";
+import Footer from "@/layouts/Footer";
+import "./index.less";
 
 function App() {
   return (
