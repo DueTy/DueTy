@@ -41,6 +41,11 @@ jobs:
       - name: Get and add host key
         run: ssh-keyscan -H 43.136.121.202 >> ~/.ssh/known_hosts
 
+      - name: Debug
+        run: |
+          ls $GITHUB_WORKSPACE
+          ls $GITHUB_WORKSPACE/dist
+
       - name: Deploy to Server
         run: |
           scp -r $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:~/github-dist
