@@ -33,15 +33,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa your_server_ip >> ~/.ssh/known_hosts
-
       - name: Deploy to Server
         run: |
-          rsync -r --delete-after $GITHUB_WORKSPACE/dist/ user@your_server_ip:/path/to/destination
+          rsync -r --delete-after $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:~/github-dist/
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.cloud-ubuntu }}
