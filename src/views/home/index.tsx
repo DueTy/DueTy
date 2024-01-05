@@ -10,7 +10,7 @@ function App() {
           <i className="name">DueTy's</i>
           <p>程序员、机车男、One Piece、SD...</p>
         </div>
-        <i style={{ color: "rgb(82, 82, 82)" }}>I'm in love with my machine</i>
+        <i style={{ color: "rgb(82, 82, 82)" }}>I'm in love with my 400</i>
         <Footer />
       </div>
     </>
