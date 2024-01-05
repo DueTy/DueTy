@@ -33,15 +33,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa 43.136.121.202 >> ~/.ssh/known_hosts
+      - name: Set up SSH keys
+        uses: webfactory/ssh-agent@v0.5.5
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Deploy to Server
         run: |
-          rsync -r --delete-after $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:~/github-dist/
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.mac }}
+          scp -r $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:~/github-dist
