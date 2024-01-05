@@ -39,4 +39,7 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          scp -r $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:~/github-dist
+          rsync -avz --delete $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:/var/www/html
+
+      - name: Restart Nginx
+        run: ssh ubuntu@43.136.121.202 'sudo service nginx restart'
