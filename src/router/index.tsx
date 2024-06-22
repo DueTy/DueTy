@@ -3,7 +3,7 @@ import Home from '@/views/home'
 
 const router = createHashRouter([
   {
-    path: '/home',
+    path: '/',
     element: <Home />
   }
 ])
