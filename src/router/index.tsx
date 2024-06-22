@@ -1,7 +1,7 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 import Home from '@/views/home'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/home',
     element: <Home />
