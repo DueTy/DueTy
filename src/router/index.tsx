@@ -3,7 +3,7 @@ import Home from '@/views/home'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/home',
     element: <Home />
   }
 ])
