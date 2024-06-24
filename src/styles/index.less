@@ -1,1 +1,60 @@
 @import url("reset.less");
+
+
+.genMarginVertically(@s, @i: 4) when (@i <=@s) {
+  .mt-@{i} {
+    margin-top: (@i * 1px);
+  }
+
+  .mb-@{i} {
+    margin-top: (@i * 1px);
+  }
+
+  .genMarginVertically(@s, (@i + 2));
+}
+
+.genMarginVertically(18);
+
+.genMarginHorizontally(@s, @i: 5) when (@i <=@s) {
+  .ml-@{i} {
+    margin-left: (@i * 1px);
+  }
+
+  .mr-@{i} {
+    margin-left: (@i * 1px);
+  }
+
+  .genMarginHorizontally(@s, (@i + 5));
+}
+
+.genMarginHorizontally(20);
+
+.genFontSize(@s, @i: 12) when (@i <=@s) {
+  .font-@{i} {
+    font-size: (@i * 1px);
+  }
+
+  .genFontSize(@s, (@i + 1))
+}
+
+.genFontSize(40);
+
+.font-bold {
+  font-weight: 600;
+}
+
+.font-lighter {
+  font-weight: 400;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.din-alternate {
+  font-family: 'DIN Alternate';
+}
