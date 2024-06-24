@@ -1,45 +1,45 @@
-name: CI/CD on Release
+# name: CI/CD on Release
 
-on:
-  push:
-    branches:
-      - release
+# on:
+#   push:
+#     branches:
+#       - release
 
-jobs:
-  build-and-deloy:
-    runs-on: ubuntu-latest
+# jobs:
+#   build-and-deloy:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 14
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install dependencies
+#         run: npm install
 
-      - name: Build
-        run: npm run build
+#       - name: Build
+#         run: npm run build
 
-      - name: Set up SSH keys
-        uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+#       - name: Set up SSH keys
+#         uses: webfactory/ssh-agent@v0.7.0
+#         with:
+#           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Get and add host key
-        run: ssh-keyscan -H 43.136.121.202 >> ~/.ssh/known_hosts
+#       - name: Get and add host key
+#         run: ssh-keyscan -H 43.136.121.202 >> ~/.ssh/known_hosts
 
-      - name: Debug
-        run: |
-          ls $GITHUB_WORKSPACE
-          ls $GITHUB_WORKSPACE/dist
+#       - name: Debug
+#         run: |
+#           ls $GITHUB_WORKSPACE
+#           ls $GITHUB_WORKSPACE/dist
 
-      - name: Deploy to Server
-        run: |
-          rsync -avz --delete $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:~/github-dist
+#       - name: Deploy to Server
+#         run: |
+#           rsync -avz --delete $GITHUB_WORKSPACE/dist/ ubuntu@43.136.121.202:~/github-dist
 
-      - name: Restart Nginx
-        run: ssh ubuntu@43.136.121.202 'sudo rm -rf /var/www/html/* && sudo mv ~/github-dist/* /var/www/html/ && sudo service nginx restart'
+#       - name: Restart Nginx
+#         run: ssh ubuntu@43.136.121.202 'sudo rm -rf /var/www/html/* && sudo mv ~/github-dist/* /var/www/html/ && sudo service nginx restart'
