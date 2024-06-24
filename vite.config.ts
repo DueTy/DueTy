@@ -6,6 +6,7 @@ import path from "path";
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   return {
+    base: './',
     plugins: [react()],
     resolve: {
       alias: {
