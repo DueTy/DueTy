@@ -1,5 +1,11 @@
 @import url("reset.less");
 
+.common-p {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
 
 .genMarginVertically(@s, @i: 4) when (@i <=@s) {
   .mt-@{i} {
@@ -13,7 +19,7 @@
   .genMarginVertically(@s, (@i + 2));
 }
 
-.genMarginVertically(18);
+.genMarginVertically(40);
 
 .genMarginHorizontally(@s, @i: 5) when (@i <=@s) {
   .ml-@{i} {
@@ -34,10 +40,10 @@
     font-size: (@i * 1px);
   }
 
-  .genFontSize(@s, (@i + 1))
+  .genFontSize(@s, (@i + 2))
 }
 
-.genFontSize(40);
+.genFontSize(60);
 
 .font-bold {
   font-weight: 600;
@@ -57,4 +63,8 @@
 
 .din-alternate {
   font-family: 'DIN Alternate';
+}
+
+.font-palatino {
+  font-family: Palatino;
 }

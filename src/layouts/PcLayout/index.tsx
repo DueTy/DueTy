@@ -1,13 +1,6 @@
-import React, { PropsWithChildren } from 'react'
-import { AppBar } from '@mui/material'
-
+import { PropsWithChildren } from 'react'
 const PcLayout: React.FC<PropsWithChildren> = ({ children }) => {
-  return (
-    <>
-      <AppBar position="static"></AppBar>
-      {children}
-    </>
-  )
+  return <>{children}</>
 }
 
 export default PcLayout
