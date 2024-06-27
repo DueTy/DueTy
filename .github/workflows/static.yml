@@ -39,10 +39,10 @@ jobs:
           node-version: '18' # 或你项目所需的其他 Node.js 版本
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build the project
-        run: pnpm run build
+        run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
